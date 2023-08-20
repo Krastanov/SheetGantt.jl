@@ -369,6 +369,7 @@ for (const p of allparamrows) {
     };
 }
 </script>
+<a href="https://github.com/Krastanov/SheetGantt.jl">Source code for this server available at https://github.com/Krastanov/SheetGantt.jl</a>
 </body>
 </html>
 """
