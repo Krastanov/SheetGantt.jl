@@ -1,0 +1,16 @@
+name = "SheetGantt"
+uuid = "256edc0d-1d26-4d8d-969b-85b08ddfd6d1"
+authors = ["Stefan Krastanov <stefan@krastanov.org>"]
+version = "0.1.0"
+
+[deps]
+Base64 = "2a0f44e3-6c83-55bd-87e4-b1978d98bd5f"
+CSV = "336ed68f-0bac-5ca0-87d4-7b16caf5d00b"
+DataFrames = "a93c6f00-e57d-5684-b7b6-d8193f3e46c0"
+Dates = "ade2ca70-3891-5945-98fb-dc099432e06a"
+Downloads = "f43a241f-c20a-4ad4-852c-f6b1247861c6"
+Genie = "c43c736e-a2d1-11e8-161f-af95117fbd1e"
+Inflector = "6d011eab-0732-4556-8808-e463c76bf3b6"
+Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
+Mustache = "ffc61752-8dc7-55ee-8c37-f3e9cdd09e70"
+PrettyPrint = "8162dcfd-2161-5ef2-ae6c-7681170c5f98"
