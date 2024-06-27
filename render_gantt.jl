@@ -117,7 +117,9 @@ htmlplot = "no plot"
 plan_tpl = """
 <section class="plan" id="{{:plan_name}}" data-plan-name="{{:plan_name}}" data-cat="{{:catcode}}" data-start="{{:start_month}}" data-end="{{:end_month}}">
 <h2 class="plan_name" >{{:plan_name}}</h2>
+{{#:flagbearer}}
 <span class="flagbearer">{{:flagbearer}}</span>
+{{/:flagbearer}}
 <time class="target_date">{{:target_date_str}}</time>
 <div class="depends_on">
 {{@:depends_on}}
