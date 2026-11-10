@@ -18,6 +18,11 @@ end
 cat_to_code(v::AbstractString, categories) = join(sort([cat_to_code_s(strip(s),categories) for s in split(v,",")]),"")
 cat_to_code(::Missing, categories) = "0"
 
+# CSV string storage types must be converted before Dates parses their contents.
+parse_plan_date(value::AbstractString) = Date(String(value))
+parse_plan_date(value::Date) = value
+parse_plan_date(::Missing) = throw(ArgumentError("Every plan requires Start_Date and Target_Date"))
+
 function render_gantt(sheetid,column_width,project_month_span,project_start_date_str)
 #
 # Download the data
@@ -48,8 +53,8 @@ while i<=length(plans_csv)
     if !all(ismissing, r) && !ismissing(r.Plan)
         plan_name = r.Plan
         flagbearer = r.Flagbearer
-        target_date = r.Target_Date
-        start_date = r.Start_Date
+        target_date = parse_plan_date(r.Target_Date)
+        start_date = parse_plan_date(r.Start_Date)
         category = r.Category
         catcode = cat_to_code(category,categories)
         em = project_month(target_date)
