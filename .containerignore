@@ -1,0 +1,7 @@
+.git
+Manifest*.toml
+config/secrets.jl
+.env
+log/
+sessions/
+cache/
